@@ -1,44 +1,45 @@
-# 🛠️ Systems From Scratch Lab
+# Systems From Scratch Lab
 
-An original, modular collection of core computer science systems built from the ground up in Python without external frameworks or third-party libraries.
-
----
-
-## 📌 Included Systems
-
-| # | System | Core Concept | Language |
-|---|---|---|---|
-| **01** | **Mini-Git** | Cryptographic content-addressed object store & version control | Python |
-| **02** | **Mini-Redis** | In-memory key-value engine with raw TCP socket listener & TTL | Python |
-| **03** | **Mini-HTTP-Server** | Raw socket HTTP/1.1 web server with routing & static file serving | Python |
-| **04** | **Mini-Blockchain** | Cryptographic proof-of-work ledger with SHA-256 block mining | Python |
-| **05** | **Mini-Neural-Net** | Pure feedforward neural network with backpropagation & gradient descent | Python |
+A hands-on exploration of fundamental computer science concepts by implementing minimal, working versions of core systems from scratch in Python—using only the standard library.
 
 ---
 
-## 🚀 Quickstart
+## Implementations
 
-Run any individual system or its automated verification suite:
+| System | Directory | Core Concepts |
+|---|---|---|
+| **Mini-Git** | `01-mini-git/` | Content-addressed storage, SHA-1 hashing, blobs, trees, commit objects, refs, log traversal |
+| **Mini-Redis** | `02-mini-redis/` | In-memory key-value store, TCP socket server, RESP protocol parser, TTL expiration |
+| **Mini-HTTP-Server** | `03-mini-http-server/` | Raw socket HTTP/1.1 server, request parsing, routing, MIME types, static file serving |
+| **Mini-Blockchain** | `04-mini-blockchain/` | Cryptographic ledger, SHA-256 proof-of-work mining, block verification, tampering check |
+| **Mini-Neural-Net** | `05-mini-neural-net/` | 2-layer feedforward network, matrix operations, sigmoid activation, backpropagation |
+
+---
+
+## Running the Tests
+
+Each system includes a standalone test script demonstrating functionality:
 
 ```bash
-# 01. Test Mini-Git
+# Test Git implementation (init, hash-object, cat-file, write-tree, commit, log)
 python 01-mini-git/test_minigit.py
 
-# 02. Test Mini-Redis (In-Memory Store)
+# Test Redis implementation (SET, GET, DEL, EXISTS, EXPIRE, PING)
 python 02-mini-redis/test_miniredis.py
 
-# 03. Test Mini-HTTP-Server
+# Test HTTP Server (GET routing, 404 handling, static files)
 python 03-mini-http-server/test_miniserver.py
 
-# 04. Test Mini-Blockchain
+# Test Blockchain (Block mining, proof-of-work validation, chain tampering detection)
 python 04-mini-blockchain/test_blockchain.py
 
-# 05. Test Mini-Neural-Net
+# Test Neural Network (XOR problem learning and accuracy evaluation)
 python 05-mini-neural-net/test_neural_net.py
 ```
 
 ---
 
-## 👤 Author
+## Design Goals
 
-Developed with passion by **Shiva Tiwari** ([@SHIVA-TIWARI2403](https://github.com/SHIVA-TIWARI2403)).
+- **Zero External Dependencies:** Built entirely with Python standard library (`socket`, `hashlib`, `zlib`, `struct`, `math`).
+- **Readable Implementations:** Prioritizes clean code structure over micro-optimizations to make the underlying protocol/algorithm clear.
